@@ -23,4 +23,3 @@ int main() {
     array_clone(strs, n);
     return 0;
 }
-#include <stdlib.h>
