@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int factorial(int number);
+int factorial(int *number);
 
 int main() {
     printf("Enter an integer number: \n");
@@ -8,6 +8,8 @@ int main() {
     int number;
     scanf("%d", &number);
 
-    printf("The result of the number's factorial %d is: %d", number, factorial(number));
+    printf("The result of the number's factorial %d is: %d\n", number, factorial(&number));
+
+    printf("No input: %d\n", factorial(NULL));   // simulate "no argument"
     return 0;
 }
